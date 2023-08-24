@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Notfound from './pages/Notfound';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Portofolio" element={<Portfolio />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
       <Footer />

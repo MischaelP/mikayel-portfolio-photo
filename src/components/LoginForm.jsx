@@ -3,7 +3,6 @@ import React from 'react'
 function LoginForm() {
   return (
     <>
-    <p>Formulaire de Enregistrement nouvel utilisateur</p>
     <div className='flex'>
       <div className='w-1/2 bg-grey-100 rounded-sm'>
         <form>
