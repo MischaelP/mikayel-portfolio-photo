@@ -14,15 +14,15 @@ function NavBar() {
 
   return (
       <>
-       <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 '>
+       <div className='flex justify-between items-center h-24 max-w-[1600px] mx-auto px-4'>
         <h1 className='w-full text-3xl font-bold font-prata'>
           Mischael
         </h1>
-          <ul className='hidden md:flex '>
-            <li className='font-prata p-4'><Link to = "/">Home</Link></li>
-            <li className='font-prata p-4'><Link to = "/Portfolio">Portfolio</Link></li>
-            <li className='font-prata p-4'><Link to = "/Services">Services</Link></li>
-            <li className='font-prata p-4'><Link to = "/Contact">Contact</Link></li>
+          <ul className='hidden md:flex'>
+            <li className='font-prata  md:text-3xl p-4'><Link to = "/">Home</Link></li>
+            <li className='font-prata md:text-3xl p-4'><Link to = "/Portfolio">Portfolio</Link></li>
+            <li className='font-prata md:text-3xl p-4'><Link to = "/Services">Services</Link></li>
+            <li className='font-prata md:text-3xl p-4'><Link to = "/Contact">Contact</Link></li>
           </ul>
             <div onClick={handlenav} className='block md:hidden'>
               {!showMenu  ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
@@ -32,10 +32,10 @@ function NavBar() {
           <div className={!showMenu ? 'fixed left-0 top-0 w-[60%] h-full bg-gray-400 ease-in-out duration-500 ' : 'fixed left-[-100%] ease-out duration-500' } >
               
               <ul className='p-4 m-4'>
-                <li className='font-prata p-4 border-b border-white'><Link to = "/">Home</Link></li>
-                <li className='font-prata p-4 border-b border-white' ><Link to = "/Portfolio">Portfolio</Link></li>
-                <li className='font-prata p-4 border-b border-white'><Link to = "/Services">Services</Link></li>
-                <li className='font-prata p-4'><Link to = "/Contact">Contact</Link></li>
+                <li className='font-prata text-xl p-4 border-b border-white'><Link to = "/">Home</Link></li>
+                <li className='font-prata text-xl p-4 border-b border-white' ><Link to = "/Portfolio">Portfolio</Link></li>
+                <li className='font-prata text-xl p-4 border-b border-white'><Link to = "/Services">Services</Link></li>
+                <li className='font-prata text-xl p-4'><Link to = "/Contact">Contact</Link></li>
               </ul>
           </div>
        </div>

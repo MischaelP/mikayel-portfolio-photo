@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <>
-        <p>Logo photo de Mischael</p><br/>
-        <Link to='/Contact'>Contact me</Link>
-        <p>Logo instagram</p>
+      <div className='flex flex-cols sm:flex-row max-w-[1600px] py-3 mx-auto'>
+        <Link to='/Contact' className='font-prata text-xl'>Contact me</Link>
+        <p className='font-prata'>Logo instagram</p>
+      </div>
 
     </>
   )
