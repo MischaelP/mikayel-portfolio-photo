@@ -1,21 +1,20 @@
 import React from 'react'
-import img1 from '../img/img1.jpg'
+
 
 
 function Home() {
   return (
-  <div className='flex'>
-    <div className='bg-gray-50 flex w-full'>
-      <div className='w-1/2 p-4'>
-        <p>Welcome to my website</p>
-      </div>
-
-      <div className='w-1/2 p-4'>
-        <p>The pix showdown</p>
-        <img src={img1} alt='Mikayel' className='w-1/2 h-1/2 object-cover'/>
-      </div>
-    </div>
-  </div>
+    <>
+        <div className='flex flex-col sm:flex-row sm:pt-[60px]'>
+          <div className='px-2 py-1 sm:w-2/3'>
+            <h2 className='font-prata text-lg pt-8 font-bold text-center sm:text-[60px]'>Welcome to my photography</h2>
+            <p className='font-prata text-center text-align'></p>
+          </div>
+          <div className='flex px-2 py-1 sm:pt-4 sm:w-1/3' >
+            <p>This is great</p>
+        </div>
+        </div>
+    </>
   )
 }
 

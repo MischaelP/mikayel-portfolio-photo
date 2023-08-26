@@ -1,21 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai';
+
+
 
 
 function NavBar() {
+    const [showMenu, setShowMenu] = useState(false);
+
+    const handlenav = () => {
+      setShowMenu(!showMenu);
+    }
+
   return (
-    <nav className='flex justify-between items-center p-4 bg-slate-100'>
-      <div className='text-lg font-bold'>
-        <p>Futur logo</p>
-      </div>
-      <div className='flex space-x-4'>
-        <Link to ="/" className='font-semibold hover:text-xl hover:font-semibold'>Home</Link>
-        <Link to ="/Services" className='font-semibold hover:text-xl hover:font-semibold'>Services</Link>
-        <Link to ="/Portfolio" className='font-semibold hover:text-xl hover:font-semibold'>Portfolio</Link>
-        <Link to ="/Contact" className='font-semibold hover:text-xl hover:font-semibold'>Contact</Link>
-      </div>
-    </nav>
-  )
+      <>
+       <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 '>
+        <h1 className='w-full text-3xl font-bold font-prata'>
+          Mischael
+        </h1>
+          <ul className='hidden md:flex '>
+            <li className='font-prata p-4'><Link to = "/">Home</Link></li>
+            <li className='font-prata p-4'><Link to = "/Portfolio">Portfolio</Link></li>
+            <li className='font-prata p-4'><Link to = "/Services">Services</Link></li>
+            <li className='font-prata p-4'><Link to = "/Contact">Contact</Link></li>
+          </ul>
+            <div onClick={handlenav} className='block md:hidden'>
+              {!showMenu  ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+            </div>
+
+          {/*Mobile nav*/}
+          <div className={!showMenu ? 'fixed left-0 top-0 w-[60%] h-full bg-gray-400 ease-in-out duration-500 ' : 'fixed left-[-100%] ease-out duration-500' } >
+              <ul className='p-4 m-4'>
+                <li className='font-prata p-4 border-b border-white'><Link to = "/">Home</Link></li>
+                <li className='font-prata p-4 border-b border-white' ><Link to = "/Portfolio">Portfolio</Link></li>
+                <li className='font-prata p-4 border-b border-white'><Link to = "/Services">Services</Link></li>
+                <li className='font-prata p-4'><Link to = "/Contact">Contact</Link></li>
+              </ul>
+          </div>
+       </div>
+      </>
+    )
 } 
 
 export default NavBar

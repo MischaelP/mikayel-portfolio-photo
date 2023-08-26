@@ -13,7 +13,7 @@ function Register() {
             userPassword
         }
         
-        console.log(newUser);
+        return handleRegister;
     }
 
   return (
