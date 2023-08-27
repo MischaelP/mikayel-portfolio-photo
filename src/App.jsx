@@ -10,7 +10,7 @@ import Notfound from './pages/Notfound';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Register from './pages/Register';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './admin/Dashboard';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Services" element={<Services />} />
-          <Route path="/Portofolio" element={<Portfolio />} />
+          <Route path="/Portfolio" element={<Portfolio />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
