@@ -29,7 +29,7 @@ function NavBar() {
             </div>
 
           {/*Mobile nav*/}
-          <div className={!showMenu ? 'fixed left-0 top-0 w-[60%] h-full bg-gray-400 ease-in-out duration-500 ' : 'fixed left-[-100%] ease-out duration-500' } >
+          <div className={!showMenu ? 'fixed left-0 top-0 z-10 w-[60%] h-full bg-gray-400 ease-in-out duration-500 ' : 'fixed left-[-100%] ease-out duration-500' } >
               
               <ul className='p-4 m-4'>
                 <li className='font-prata text-xl p-4 border-b border-white'><Link to = "/">Home</Link></li>
