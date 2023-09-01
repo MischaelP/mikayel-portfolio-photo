@@ -14,15 +14,15 @@ function NavBar() {
 
   return (
       <>
-       <div className='flex justify-between items-center h-24 max-w-[1600px] mx-auto px-4'>
-        <h1 className='w-full text-3xl font-bold font-prata'>
+       <div className='flex justify-between items-center h-24 max-w-[1280px] mx-auto px-4'>
+        <h1 className='w-full text-2xl font-bold font-prata'>
           Mischael
         </h1>
           <ul className='hidden md:flex'>
-            <li className='font-prata  md:text-3xl p-4'><Link to = "/">Home</Link></li>
-            <li className='font-prata md:text-3xl p-4'><Link to = "/Portfolio">Portfolio</Link></li>
-            <li className='font-prata md:text-3xl p-4'><Link to = "/Services">Services</Link></li>
-            <li className='font-prata md:text-3xl p-4'><Link to = "/Contact">Contact</Link></li>
+            <li className='font-prata  md:text-2xl p-4'><Link to = "/">Home</Link></li>
+            <li className='font-prata md:text-2xl p-4'><Link to = "/Portfolio">Portfolio</Link></li>
+            <li className='font-prata md:text-2xl p-4'><Link to = "/Services">Services</Link></li>
+            <li className='font-prata md:text-2xl p-4'><Link to = "/Contact">About</Link></li>
           </ul>
             <div onClick={handlenav} className='block md:hidden'>
               {!showMenu  ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
@@ -35,7 +35,7 @@ function NavBar() {
                 <li className='font-prata text-xl p-4 border-b border-white'><Link to = "/">Home</Link></li>
                 <li className='font-prata text-xl p-4 border-b border-white' ><Link to = "/Portfolio">Portfolio</Link></li>
                 <li className='font-prata text-xl p-4 border-b border-white'><Link to = "/Services">Services</Link></li>
-                <li className='font-prata text-xl p-4'><Link to = "/Contact">Contact</Link></li>
+                <li className='font-prata text-xl p-4'><Link to = "/Contact">About</Link></li>
               </ul>
           </div>
        </div>
