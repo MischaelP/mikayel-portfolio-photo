@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function LoginForm() {
     const [email,setEmail] = useState("");
@@ -7,11 +8,19 @@ function LoginForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const SendLogin = {
+        const sendLogin = {
             email,
             password
         }
         
+
+        axios.post('http://127.0.0.1:3002/login/loginuser', sendLogin)
+            .then(response => {
+             console.log("logged in");
+                      })
+             .catch(error => {
+              console.log("Wrong login", error.data);
+                      });
     }
   return (
     <div className="flex min-h-[300px] flex-col justify-center px-6 py-8 lg:px-8">
