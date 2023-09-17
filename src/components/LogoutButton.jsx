@@ -5,9 +5,11 @@ const LogoutButton = () => {
   const { logout } = useAuth0();
 
   return (
+    <div className='flex flex-col max-w-[1280px] mx-[300px] sm:pt-2 sm:flex-row h-[100px]'>
     <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-      Log Out
+      <p className="font-bold ">Log out</p>
     </button>
+    </div>
   );
 };
 

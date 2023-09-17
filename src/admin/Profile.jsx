@@ -1,7 +1,7 @@
 import React from 'react'
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState, useEffect} from 'react';
-import axios from 'axios';
+import LogoutButton from '../components/LogoutButton';
 
 function Profile (){
     const { user, isAuthenticated, isLoading } = useAuth0();
@@ -44,16 +44,23 @@ function Profile (){
                 <div className='flex flex-col'>
                   <h1 className='text-l font-bold p-1'>Bonjour {user.name}</h1>
                 </div>
-                <ul>
-                  
-                    <div className='min-h-[250px] max-w-[1200px] mx-auto rounded border border-slate-400'>
-                    <div className='flex divide-x divide-slate-700'>  
-                      
-                    </div>
+                    <div className='min-h-[250px] max-w-[1200px] mx-auto rounded border border-slate-400 '>
+                   
+                    {msgData.map(messages => (
+                        <div key={messages._id} className="p-4 border-b border-slate-700">
+                        <h3>Nom : {messages.Nom}</h3>
+                        <h3>Prénom : {messages.Prenom}</h3>
+                        <h3>Email : {messages.Email}</h3>
+                        <p>Message : {messages.Message}</p>
+                      </div>
+                    ))}
+                     
+                    
                 </div>
                   
-                </ul>
+              
           </div>
+          
         )
       );
 }

@@ -4,7 +4,12 @@ import { useAuth0 } from '@auth0/auth0-react';
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
-  return <button onClick={() => loginWithRedirect()}>Log In bRO</button>;
+  return (
+    
+    <div className='flex flex-col max-w-[1280px] mx-[300px] sm:pt-2 sm:flex-row h-[100px]'>
+    <button onClick={() => loginWithRedirect()}>Connexion</button>
+    </div>
+  )
 };
 
 
