@@ -44,25 +44,46 @@ function ContactForm() {
 
   return (
     <>
-      <div className='flex m-4'>
-        <div className='w-1/2 p-4 bg-gray-50 rounded-1-md'>
-            <form>
-                <label htmlFor="Nom" className='block mb-2 font-semibold'>Nom :</label>
-                <input name='Nom' placeholder='Votre nom' type='text' onChange={(e) => setNom(e.target.value)} className='block mb-2 font-semibold'/>
-                <label htmlFor="Prenom">Prenom :</label>
-                <input nom="Prenom" placeholder='Votre prenom' type='text' onChange={(e) =>setPrenom(e.target.value)}/>
-                <label htmlFor="email">Email :</label>
-                <input name="email" placeholder='Votre email' type='text' onChange={(e) => setEmail(e.target.value)}/>
-                <label htmlFor="message">Message :</label>
-                <textarea name='message' placeholder='Votre message' onChange={(e) => setMessage(e.target.value)}></textarea>
-                <button onClick={handleSubmit}>Envoyer</button>
-            </form>
-        </div>
-        <div className='w-1/2 p-4 bg-white rounded-r-md ml-4'>
-          <p>lorem</p>
+      <div className='flex md:flex-cols  max-w-[1280px] py-3 mx-auto p-10'>
+          <div>
+            <p>About me</p>
+          </div>
 
-        </div>
-      </div>
+
+
+
+          <div className='flex-col md:flex-cols  max-w-[1280px] py-3 mx-auto p-10'>
+
+            <div className='w-full md:w-[700px] p-4 bg-gray-50 rounded-1-md order-1'>
+              <form>
+                <div className="flex flex-col md:flex-row mb-2">
+                  <label htmlFor="Nom" className=" p-1 mb-2 ml-2">Nom</label>
+                  <input name="Nom"
+                    placeholder="Votre nom"
+                    type="text"
+                    className="w-full mb-2"
+                    onChange={(e) => setNom(e.target.value)}/>
+                </div>
+
+                <div className="flex flex-col md:flex-row mb-2">
+                  <label htmlFor="Prenom" className='"mb-2 ml-2 p-1'>Prenom</label><br/>
+                  <input nom="Prenom" placeholder='Votre prenom' type='text' onChange={(e) =>setPrenom(e.target.value)} className="w-full mb-2 ml-2"/><br/>
+                </div>
+
+                <div className="flex flex-col md:flex-row mb-2 p-1">
+                  <label htmlFor="email">Email</label><br/>
+                  <input name="email" placeholder='Votre email' type='text' onChange={(e) => setEmail(e.target.value)} className="w-full mb-2 ml-2"/><br/>
+                </div>
+
+                <div className="flex flex-col md:flex-row mb-2 p-1">
+                  <label htmlFor="message">Message</label><br/>
+                  <textarea name='message' placeholder='Votre message' onChange={(e) => setMessage(e.target.value)} className='md:w-auto w-full mb-2 ml-2'></textarea><br/>
+                </div>
+                  <button onClick={handleSubmit} className='mx-auto'>Envoyer</button>
+              </form>
+            </div>
+          </div>
+       </div>
     </>
   )
 }

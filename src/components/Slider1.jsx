@@ -33,18 +33,17 @@ function Slider1() {
 
   return (
     <>
-        <div className='max-w-[500px] mx-auto relative'>
-           <img src={slide[currentSlide].url} alt={slide[currentSlide].alt} className='h-auto' />
-           <div className='absolute top-1/2 transform -translate-y-1/2 left-0'>
-            <button onClick={prevSlide} className='px-4 py-2 mr-2 bg-gray-500 text-white'>
-            Previous
-            </button>
-            <button onClick={nextSlide} className='px-4 py-2 bg-gray-500 text-white'>
-            Next
-            </button>
-      </div>
+        <div className='mx-auto relative flex items-center'>
+            <div onClick={prevSlide} className='text-2xl cursor-pointer absolute left-0'>
+                &lt; {/* Flèche gauche */}
+            </div>
+            <img src={slide[currentSlide].url} alt={slide[currentSlide].alt}
+                className='w-64 h-auto mx-auto'/>
+            <div onClick={nextSlide} className='text-2xl cursor-pointer absolute right-0'>
+                &gt; {/* Flèche droite */}
+            </div>
         </div>
-    </>
+</>
   )
 }
 
